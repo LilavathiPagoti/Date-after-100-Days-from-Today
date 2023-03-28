@@ -7,7 +7,7 @@ const app = express();
 app.get("/", (request, response) => {
   let newDate = new Date();
   const result = addDays(
-    new Date(newDate.getFullYear(), newDate.getDate(), newDate.getMonth()),
+    new Date(newDate.getFullYear(),newDate.getMonth()), newDate.getDate(), 
     100
   );
   response.send(
